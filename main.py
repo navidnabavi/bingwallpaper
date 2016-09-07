@@ -1,8 +1,9 @@
 from requests import get
-import commands
+import os
+import getpass
 
 api_url = 'http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1'
-image_path = '/home/navid/wallpaper.jpg'
+image_path = '/home/{}/wallpaper.jpg'.format(getpass.getuser())
 image_url = 'http://www.bing.com/{}_1920x1080.jpg'
 image_request = get(api_url).json()
 
@@ -14,4 +15,4 @@ file.close()
 
 command = "gsettings set org.mate.background picture-filename '{}'".format(image_path)
 
-status, output = commands.getstatusoutput(command)
+os.system(command)
