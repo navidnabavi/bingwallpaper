@@ -40,7 +40,7 @@ pip install -r requirements.txt
 2. Run the script with Python:
 
 ```bash
-python set_wallpaper.py
+python main.py
 ```
 
 The script will automatically detect your operating system and update the wallpaper accordingly.
@@ -63,11 +63,11 @@ You can automate the process of updating your wallpaper daily using a cron job (
 3. Add the following line to the crontab file to run the script daily at 7 AM:
 
    ```bash
-   0 7 * * * /usr/bin/python3 /path/to/your/script/set_wallpaper.py
+   0 7 * * * /usr/bin/python3 /path/to/your/script/main.py
    ```
 
    - **`0 7 * * *`**: This cron expression runs the script every day at 7:00 AM.
-   - Replace `/path/to/your/script/set_wallpaper.py` with the actual path to your Python script.
+   - Replace `/path/to/your/script/main.py` with the actual path to your Python script.
 
 4. Save and exit the crontab editor. Your cron job is now set up to change the wallpaper automatically every day.
 
@@ -83,7 +83,7 @@ You can automate the process of updating your wallpaper daily using a cron job (
 8. In the **Add arguments** field, add the path to your `set_wallpaper.py` script. For example:
 
    ```bash
-   C:\path\to\your\script\set_wallpaper.py
+   C:\path\to\your\script\main.py
    ```
 
 9. Click **Next** and **Finish**.
